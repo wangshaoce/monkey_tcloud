@@ -11,6 +11,7 @@ node('stf'){
         loginPassword = "${LoginPassword}"
         defaultAppActivity = "${DefaultAppActivity}"
         tcloudUrl = "${TcloudUrl}"
+        tcloudServiceUrl = "${TcloudServiceUrl}"
         taskId = "${TaskId}"
         monkeyId = "${MonkeyId}"
         installAppRequired = "${InstallAppRequired}"
