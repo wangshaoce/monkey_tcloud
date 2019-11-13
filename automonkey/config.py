@@ -39,11 +39,11 @@ class DefaultConfig(object):
 
     TCLOUD_URL = 'http://localhost:8080/v1/monkey'  # Tcloud 对应的地址,可以作为参数传入
 
-    OSS_URL = ''  # OSS url
+    OSS_URL = 'http://tcloud-wsc.oss-cn-beijing.aliyuncs.com'  # OSS url
 
-    OSS_MONKEY_URL = ''  # monkey oss url 存储报告地址
+    OSS_MONKEY_URL = 'http://tcloud-wsc.oss-cn-beijing.aliyuncs.com/monkey/report'  # monkey oss url 存储报告地址
 
-    OSS_AUTH = oss2.Auth('username', 'password')  # oss auth
+    OSS_AUTH = oss2.Auth('LTAI4FoqX7NWALb3KprarESm', 'cszj92E59f6Fzcw0m4EmU2VvGs9Uxg')  # oss auth
 
 
 class MonkeyConfig(object):
