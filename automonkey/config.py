@@ -41,7 +41,7 @@ class DefaultConfig(object):
 
     OSS_URL = 'http://tcloud-wsc.oss-cn-beijing.aliyuncs.com'  # OSS url
 
-    OSS_MONKEY_URL = 'http://tcloud-wsc.oss-cn-beijing.aliyuncs.com/monkey/report'  # monkey oss url 存储报告地址
+    OSS_MONKEY_URL = 'http://tcloud-wsc.oss-cn-beijing.aliyuncs.com'  # monkey oss url 存储报告地址
 
     OSS_AUTH = oss2.Auth('LTAI4FoqX7NWALb3KprarESm', 'cszj92E59f6Fzcw0m4EmU2VvGs9Uxg')  # oss auth
 
