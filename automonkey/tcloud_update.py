@@ -348,7 +348,7 @@ class TCloud(object):
         try:
             logger.info('({}) get monkey cancel status {}'.format(self.device_id, task_id))
 
-            request_url = '{}/v1/monkey/cancel?task_id={}'.format(self.tcloud_url, task_id)
+            request_url = '{}/v1/monkey/cancel?task_id={}'.format(self.tcloud_service_url, task_id)
 
             response = requests.request(method='GET', url=request_url)
             if response.ok:
