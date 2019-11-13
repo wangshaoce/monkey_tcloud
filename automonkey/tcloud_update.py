@@ -12,11 +12,12 @@ logger = logging.getLogger(__name__)
 
 class TCloud(object):
 
-    def __init__(self, task_id, device_id, monkey_id, tcloud_url, process=0):
+    def __init__(self, task_id, device_id, monkey_id, tcloud_url, tcloud_service_url,process=0):
         self.task_id = task_id
         self.monkey_id = monkey_id
         self.device_id = device_id
         self.tcloud_url = tcloud_url if tcloud_url is not None else DefaultConfig.TCLOUD_URL
+        self.tcloud_service_url = tcloud_service_url if tcloud_service_url is not None else DefaultConfig.TCLOUD_SERVICE_URL
         self.anr = 0
         self.crash = 0
         self.process = process
