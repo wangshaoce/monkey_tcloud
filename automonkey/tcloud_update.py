@@ -12,12 +12,11 @@ logger = logging.getLogger(__name__)
 
 class TCloud(object):
 
-    def __init__(self, task_id, device_id, monkey_id, tcloud_url, tcloud_service_url,process=0):
+    def __init__(self, task_id, device_id, monkey_id, tcloud_url, process=0):
         self.task_id = task_id
         self.monkey_id = monkey_id
         self.device_id = device_id
         self.tcloud_url = tcloud_url if tcloud_url is not None else DefaultConfig.TCLOUD_URL
-        self.tcloud_service_url = tcloud_service_url if tcloud_service_url is not None else DefaultConfig.TCLOUD_SERVICE_URL
         self.anr = 0
         self.crash = 0
         self.process = process
@@ -348,7 +347,7 @@ class TCloud(object):
         try:
             logger.info('({}) get monkey cancel status {}'.format(self.device_id, task_id))
 
-            request_url = '{}/v1/monkey/cancel?task_id={}'.format(self.tcloud_service_url, task_id)
+            request_url = '{}/v1/monkey/cancel?task_id={}'.format(self.tcloud_url, task_id)
 
             response = requests.request(method='GET', url=request_url)
             if response.ok:
