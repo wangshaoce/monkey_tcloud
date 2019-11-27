@@ -240,7 +240,7 @@ class MonkeyRunner(Process):
         logger.info('({}) monkey mode : {}'.format(self.monkey.device.device_id, run_mode))
 
         command = 'shell CLASSPATH=/sdcard/monkey.jar:/sdcard/framework.jar exec app_process ' \
-                  ' /system/bin tv.panda.test.monkey.Monkey -p {} {} --throttle 500 ' \
+                  ' /system/bin tv.panda.test.monkey.Monkey -p {} {} --throttle 500 --act-blacklist-file /sdcard/awl.strings' \
                   ' --output-directory /sdcard/MonkeyLog --running-minutes {} -v -v > {}'.format(
             self.monkey.config.package_name, run_mode, run_time, self.local_monkey_path)
 
@@ -356,6 +356,7 @@ class MonkeyRunner(Process):
             # 将 monkey.jar 和 framework.jar push 到 /sdcard
             self.adb_tool.push_file('./tools/monkey.jar', '/sdcard/')
             self.adb_tool.push_file('./tools/framework.jar', '/sdcard/')
+            self.adb_tool.push_file('./tools/awl.string','/sdcard/')
             self.adb_tool.push_file('./tools/max.config', '/sdcard/')
 
             if self.monkey.config.install_app_required:
