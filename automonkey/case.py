@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from .device import Device
 from .monkey import MonkeyCase
 from .result import CaseResult

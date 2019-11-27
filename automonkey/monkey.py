@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from .config import MonkeyConfig
 from .device import Device
 from .result import MonkeyCaseResult
